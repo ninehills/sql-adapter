@@ -73,6 +73,7 @@ CREATE INDEX IF NOT EXISTS idx_%[1]s ON %[1]s (p_type,v0,v1);`
 const (
 	sqlCreateTableMysql = `
 CREATE TABLE IF NOT EXISTS %[1]s(
+    id     BIGINT       PRIMARY KEY NOT NULL AUTO_INCREMENT,
     p_type VARCHAR(32)  DEFAULT '' NOT NULL,
     v0     VARCHAR(255) DEFAULT '' NOT NULL,
     v1     VARCHAR(255) DEFAULT '' NOT NULL,
